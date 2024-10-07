@@ -23,7 +23,6 @@ const protect = asyncHandler(async (req, res, next) => {
     res.status(401);
     throw new Error("Not authorized, no token");
   }
-  next();
 });
 
 // Admin middleware
