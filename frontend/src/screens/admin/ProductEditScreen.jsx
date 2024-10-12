@@ -32,8 +32,7 @@ const ProductEditScreen = () => {
   const [updateProduct, { isLoading: loadingUpdate }] =
     useUpdateProductMutation();
 
-  const [uploadProductImage, { isLoading: loadingUpload }] =
-    useUploadProductImageMutation();
+  const [uploadProductImage] = useUploadProductImageMutation();
 
   const navigate = useNavigate();
 
@@ -69,6 +68,7 @@ const ProductEditScreen = () => {
       toast.error(result.error);
     } else {
       toast.success("Product updated");
+      refetch();
       navigate("/admin/productlist");
     }
   };
