@@ -52,7 +52,6 @@ const ProfileScreen = () => {
         toast.error(err?.data?.message || err?.errorr);
       }
     }
-    console.log("submit");
   };
 
   return (
